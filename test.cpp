@@ -14,16 +14,6 @@ using P = pair<int, int>;
 #define MOD 1000000007
 
 int main(){
-    int n;
-    cin>>n;
-    vector<P> p;
-    p.resize(n);
-    for(int i=0;i<n;i++) {
-        int x, y; cin>>x>>y;
-        p.push_back(make_pair(x, y));
-    }
-    for(P x: p){
-        cout<<x.first<<' '<<x.second<<endl;
-    }
+    cout<<(1LL<<60)<<endl;
     return 0;
 }
