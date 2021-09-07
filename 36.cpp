@@ -17,21 +17,23 @@ using P = pair<int, int>;
 int main(){
     int n, w;
     cin>>n>>w;
-    int V[n], W[n], dp[n+1][w+1];
+    int V[n], W[n];
     for(int i=0;i<n;i++) cin>>V[i]>>W[i];
+
+    int dp[n+1][w+1];
     for(int i=0;i<=w;i++) dp[0][i]=0;
 
     for(int i=0;i<n;i++){
         for(int j=0;j<=w;j++){
             if(j>=W[i]){
-                dp[i+1][j]=max( dp[i][j], dp[i][j-W[i]]+V[i] );
+                dp[i+1][j]=max(dp[i][j], dp[i+1][j-W[i]]+V[i]);
             }
             else{
                 dp[i+1][j]=dp[i][j];
             }
         }
     }
-    
+
     cout<<dp[n][w]<<endl;
     return 0;
 }
