@@ -27,8 +27,14 @@ ll modll(ll a, ll n, ll mod){
 }
 
 int main(){
-    ll m, n;
-    cin>>m>>n;
-    cout<<modll(m, n, MOD)<<endl;
+    ll w, h;
+    cin>>w>>h;
+    ll a=1,b=1,c=1;
+    for(ll i=1;i<=w+h-2;i++){
+        a=a*i%MOD;
+        if(i==w-1) b=a;
+        if(i==h-1) c=a;
+    }
+    cout<< a*modll(b, MOD-2, MOD)%MOD*modll(c, MOD-2, MOD)%MOD <<endl;
     return 0;
 }
