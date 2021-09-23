@@ -8,7 +8,6 @@
 #include <functional>
 #include <set>
 #include <tuple>
-
 using namespace std;
 using ll = long long;
 using Graph = vector<vector<int> >;
