@@ -30,13 +30,6 @@ int main(){
     }
     for(int i=1;i<=N;i++) for(int j=2;j<=N;j++) cnt[i][j]+=cnt[i][j-1];
 
-    for(int i=1;i<=N;i++){
-        for(int j=1;j<=N;j++){
-            cout<<cnt[i][j]<<' ';
-        }
-        cout<<endl;
-    }
-
     for(int i=0;i<Q;i++){
         int p, q;
         cin>>p>>q;
